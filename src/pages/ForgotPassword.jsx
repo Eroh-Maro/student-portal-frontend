@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Auth.css";
 
-const API = "https://eroh-maro-student-portal-backend.vercel.app/";
+const API = "https://eroh-maro-student-portal-backend.vercel.app";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
