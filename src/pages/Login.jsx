@@ -1,11 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 import "./Auth.css";
 
 const Login = () => {
   const { login } = useAuth();
-  const navigate = useNavigate(); // ✅ for redirect
 
   const [matric, setMatric] = useState("");
   const [password, setPassword] = useState("");
@@ -19,11 +18,14 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("https://eroh-maro-student-portal-backend.vercel.app//auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ matric, password }),
-      });
+      const res = await fetch(
+        "https://eroh-maro-student-portal-backend.vercel.app/auth/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ matric, password }),
+        }
+      );
 
       const data = await res.json();
 
@@ -33,15 +35,8 @@ const Login = () => {
         return;
       }
 
-      // ✅ save auth
+      // ✅ AuthContext handles redirect + storage
       login(data.token, data.user);
-
-      // ✅ role-based redirect
-      if (data.user.role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/");
-      }
     } catch {
       setError("Network error. Check your connection.");
       setLoading(false);
