@@ -19,7 +19,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://172.20.10.4:5000/auth/login", {
+      const res = await fetch("https://eroh-maro-student-portal-backend.vercel.app//auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ matric, password }),

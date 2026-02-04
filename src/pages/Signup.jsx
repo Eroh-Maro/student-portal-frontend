@@ -68,7 +68,7 @@ const Signup = () => {
         matric: form.matric.toUpperCase(),
       };
 
-      const res = await fetch("http://172.20.10.4:5000/auth/signup", {
+      const res = await fetch("https://eroh-maro-student-portal-.vercel.app//auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./Courses.css";
 
-const API = "http://172.20.10.4:5000";
+const API = "https://eroh-maro-student-portal-backend.vercel.app/";
 
 const Courses = () => {
   const { token } = useAuth();
