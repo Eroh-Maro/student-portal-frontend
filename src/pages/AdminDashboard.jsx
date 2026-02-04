@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./Admin.css";
 
-const API = "https://eroh-maro-student-portal-backend.vercel.app/";
+const API = "https://eroh-maro-student-portal-backend.vercel.app";
 
 const AdminDashboard = () => {
   const { token } = useAuth();
