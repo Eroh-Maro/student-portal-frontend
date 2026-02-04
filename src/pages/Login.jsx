@@ -18,12 +18,17 @@ const Login = () => {
     setLoading(true);
 
     try {
+      // 🔹 detect admin vs student login
+      const payload = matric.includes("@")
+        ? { email: matric, password }   // admin login
+        : { matric, password };         // student login
+
       const res = await fetch(
         "https://eroh-maro-student-portal-backend.vercel.app/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ matric, password }),
+          body: JSON.stringify(payload),
         }
       );
 
@@ -53,11 +58,11 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
           <label>
-            Matric Number
+            Matric Number or Email
             <input
               value={matric}
               onChange={(e) => setMatric(e.target.value)}
-              placeholder="FOS/24/25/123456"
+              placeholder="FOS/24/25/123456 or admin@email.com"
               required
               disabled={loading}
             />
@@ -73,6 +78,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 disabled={loading}
+                autoComplete="current-password"
               />
 
               <button
