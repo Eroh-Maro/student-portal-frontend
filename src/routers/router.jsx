@@ -3,7 +3,7 @@ import App from "../App.jsx";
 
 import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
-import Signup from "../pages/SignUP.jsx";
+import Signup from "../pages/Signup.jsx";
 import Courses from "../pages/Courses.jsx";
 import Profile from "../pages/Profile.jsx";
 import VerifyOtp from "../pages/VerifyOtp.jsx";
