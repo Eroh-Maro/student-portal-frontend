@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Auth.css";
 
-const API = "http://localhost:5000";
+const API = "https://eroh-maro-student-portal-backend.vercel.app";
 
 const ResetPassword = () => {
   const { token } = useParams();

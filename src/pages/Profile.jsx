@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./Profile.css";
 
-const API = "http://localhost:5000"; // change to IP when using phone
+const API = "https://eroh-maro-student-portal-backend.vercel.app";
 
 const Profile = () => {
   const { user, token } = useAuth();
@@ -19,6 +19,8 @@ const Profile = () => {
             Authorization: `Bearer ${token}`,
           },
         });
+
+        if (!res.ok) throw new Error();
 
         const data = await res.json();
         setCourses(data);
@@ -41,6 +43,8 @@ const Profile = () => {
           Authorization: `Bearer ${token}`,
         },
       });
+
+      if (!res.ok) throw new Error();
 
       const data = await res.json();
       setCourses(data);
