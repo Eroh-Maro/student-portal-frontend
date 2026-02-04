@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 
+const API = "https://eroh-maro-student-portal-backend.vercel.app";
+
 /* Case-insensitive regex */
 const matricRegex =
   /^(FOS|COS|FOE|FOA|PHC|BMS)\/\d{2}\/\d{2}\/\d{4,6}$/i;
@@ -17,7 +19,6 @@ const Signup = () => {
   });
 
   const [showPassword, setShowPassword] = useState(false);
-
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -68,7 +69,7 @@ const Signup = () => {
         matric: form.matric.toUpperCase(),
       };
 
-      const res = await fetch("https://eroh-maro-student-portal-.vercel.app/auth/signup", {
+      const res = await fetch(`${API}/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
