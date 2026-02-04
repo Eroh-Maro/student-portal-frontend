@@ -1,0 +1,178 @@
+/* PAGE LAYOUT */
+.admin-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* HEADER CARD */
+.admin-header {
+  background: linear-gradient(135deg, #0f4c81, #1366aa);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  margin: 0;
+}
+
+.admin-header p {
+  opacity: 0.9;
+  margin-top: 0.4rem;
+}
+
+/* COURSE LIST */
+.admin-courses {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* COURSE ITEM CARD */
+.admin-course-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid #0f4c81;
+}
+
+/* COURSE TEXT */
+.admin-course-info h3 {
+  margin: 0;
+  color: #0f4c81;
+}
+
+.admin-course-info p {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* STUDENT COUNT BADGE */
+.admin-count {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* CREATE COURSE BUTTON AREA */
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.2rem;
+}
+
+.admin-create-btn {
+  background: #0f4c81;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-create-btn:hover {
+  background: #0c3f6a;
+}
+
+/* SEARCH */
+.admin-search {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.admin-search-box {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+.admin-search-box input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.admin-search-icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+
+/* RIGHT SIDE */
+.admin-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* DELETE BUTTON */
+.admin-delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.admin-delete-btn:hover {
+  background: #dc2626;
+}
+/* CREATE COURSE FORM */
+.admin-form-card {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.admin-form input:focus {
+  outline: none;
+  border-color: #0f4c81;
+  box-shadow: 0 0 0 2px rgba(15, 76, 129, 0.1);
+}
+
+.admin-create-btn {
+  background: #0f4c81;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-create-btn:hover {
+  background: #0c3f6a;
+}

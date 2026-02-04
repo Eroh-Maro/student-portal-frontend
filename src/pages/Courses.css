@@ -1,0 +1,123 @@
+.courses-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* HEADER */
+.courses-header {
+  background: linear-gradient(135deg, #0f4c81, #1366aa);
+  color: white;
+  padding: 2.2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+.courses-header h1 {
+  margin: 0;
+}
+
+.courses-header p {
+  margin-top: 0.4rem;
+  opacity: 0.9;
+}
+
+/* LIST */
+.courses-list {
+  display: grid;
+  gap: 1.4rem;
+}
+
+/* CARD */
+.course-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.course-card h3 {
+  color: #0f4c81;
+  margin-bottom: 0.2rem;
+}
+
+.course-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* STATES */
+.course-card.registered {
+  border-left: 6px solid #0f4c81;
+}
+
+/* BUTTONS */
+.course-card button {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.course-card button.add {
+  background: #0f4c81;
+  color: white;
+}
+
+.course-card button.add:hover {
+  background: #0c3f6a;
+}
+
+.course-card button.remove {
+  background: #ef4444;
+  color: white;
+}
+
+.course-card button.remove:hover {
+  background: #dc2626;
+}
+/* SEARCH BAR WRAPPER */
+.course-search {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;   /* centers like course cards */
+}
+
+/* INNER CONTAINER (same width as page content) */
+.course-search-box {
+  width: 100%;
+  max-width: 800px;          /* prevents overly long bar */
+  position: relative;
+}
+
+/* INPUT FIELD */
+.course-search input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.6rem; /* space for icon */
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+/* FOCUS STATE */
+.course-search input:focus {
+  outline: none;
+  border-color: #0f4c81;
+  box-shadow: 0 0 0 2px rgba(15, 76, 129, 0.1);
+}
+
+/* SEARCH ICON */
+.course-search-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #6b7280;
+  pointer-events: none;
+}

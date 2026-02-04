@@ -1,0 +1,187 @@
+/* =========================
+   BASE RESET (IMPORTANT)
+========================= */
+
+.nav-links,
+.side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   TOP NAVBAR (DESKTOP)
+========================= */
+
+.navbar {
+  background: #0b3c5d;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Desktop nav links */
+.nav-links.desktop {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+/* Desktop links base */
+.nav-links.desktop a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+/* Underline hover (DESKTOP ONLY) */
+.nav-links.desktop a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f4b400;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links.desktop a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Logout accent */
+.nav-links.desktop .logout {
+  color: #f4b400;
+  cursor: pointer;
+}
+
+/* Hamburger toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE SIDE NAV (FIXED)
+========================= */
+
+.side-drawer {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #0b3c5d;
+  z-index: 1100;
+  padding-top: 5rem;
+  transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+  right: 0;
+}
+
+/* 🔧 SPACING BETWEEN LINKS */
+.side-drawer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 1rem;
+}
+
+/* Each item full width */
+.side-drawer li {
+  width: 100%;
+}
+
+/* 🔧 BIG CLICKABLE AREA */
+.side-drawer a,
+.side-drawer .logout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+
+  transition: background 0.2s ease;
+}
+
+/* Tap / click feedback */
+.side-drawer a:active,
+.side-drawer .logout:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hover fallback */
+.side-drawer a:hover,
+.side-drawer .logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Logout highlight */
+.side-drawer .logout {
+  color: #f4b400;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+}
+
+/* =========================
+   RESPONSIVE RULES
+========================= */
+
+@media (max-width: 768px) {
+  .nav-links.desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Drawer close button */
+.drawer-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
