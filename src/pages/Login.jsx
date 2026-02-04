@@ -62,7 +62,7 @@ const Login = () => {
             <input
               value={matric}
               onChange={(e) => setMatric(e.target.value)}
-              placeholder="FOS/24/25/123456 or admin@email.com"
+              placeholder="FOS/24/25/123456"
               required
               disabled={loading}
             />
