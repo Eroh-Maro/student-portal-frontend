@@ -6,7 +6,7 @@ const API = "https://eroh-maro-student-portal-backend.vercel.app";
 
 /* Case-insensitive regex */
 const matricRegex =
-  /^(FOS|COS|FOE|FOA|PHC|BMS)\/\d{2}\/\d{2}\/\d{4,6}$/i;
+  /^(FOS|FNG|COS|FOE|FOA|PHC|BMS)\/\d{2}\/\d{2}\/\d{4,6}$/i;
 
 const Signup = () => {
   const navigate = useNavigate();
